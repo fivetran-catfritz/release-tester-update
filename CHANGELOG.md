@@ -22,7 +22,7 @@
 - Tests contributor link stripping vs PR link preservation: ([#1](https://github.com/fivetran-catfritz/release-tester-update/pull/1) [@catfritz](https://github.com/catfritz)) — sed should strip `[@catfritz](url)` but leave `[#1](url)` alone.
 
 # dbt_starter_project v0.1.1
-- Tests awk end anchor: this entry must not match when searching for `v0.1.10`.
+- test release 2
 
 # dbt_starter_project v0.1.0
-- First release — tests extraction when there is no previous version to compare against.
+- test release
