@@ -1,9 +1,16 @@
-name: Auto-Create Release
+name: 'auto release'
 on:
-  workflow_call:
+  pull_request:
+    types:
+      - closed
+      - labeled
 
 jobs:
-  update:
+  release:
+    if: |
+      (github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main') ||
+      github.event.label.name == 'pre-release'
+
     runs-on: ubuntu-latest
     name: Create a release
     steps:
